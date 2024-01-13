@@ -8,11 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="headingcontainer">
-      <h1 class="heading">Product List</h1>
-    </div>
-    <main>
+  <body class="">
+    <div class="heading">
+      <h1>Product List</h1>
+      <div class="icon-cart">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+        </svg>
+        <span class="cartTotal">0</span>
+      </div>
+    </div>  
+    <main class="products">
       <p id="itemlist1">Yeezy</p>
       <section class="imagecontainer1">
         <div>
@@ -107,5 +113,17 @@
         </div>
       </section>
     </main>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+        </div>
+        <div class="total">Total (0 Items): R0</div>
+        <div class="btn">
+          <button class="close">Close</button>
+          <button class="checkout">Checkout</button>
+        </div>
+    </div>
+    <script src="./products.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
