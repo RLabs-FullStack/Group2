@@ -8,104 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="headingcontainer">
-      <h1 class="heading">Product List</h1>
+  <body class="">
+    <div class="heading">
+      <h1>Product List</h1>
+      <div class="icon-cart">
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 18 20"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"
+          />
+        </svg>
+        <span class="cartTotal">0</span>
+      </div>
     </div>
-    <main>
-      <p id="itemlist1">Yeezy</p>
-      <section class="imagecontainer1">
-        <div>
-          <img src="Assets/Adidas Yeezyboost700.png" alt="" />
-          <p>Yeezy Boost 700</p>
-          <p>R7 499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img src="Assets/adidas-yeezy500-taupe-light.jpg" alt="" />
-          <p>Yeezy 500 Taupe Light</p>
-          <p>R5,499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img src="Assets/YEEZY 450 DARK SLATE.png" alt="" />
-          <p>Yeezy 450 Dark Slate</p>
-          <p>R7 499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img src="Assets/YEEZY SUEDE BOOT SEASON 5 OIL.png" alt="" />
-          <p>Yeezy Suede Boot Season 5</p>
-          <p>R7 499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-      </section>
-      <p id="itemlist2">Adidas</p>
-      <section class="imagecontainer2">
-        <div>
-          <img
-            src="Assets/Adidas/ADIDAS FEAR OF GOD ATHLETICS 86 LO CLAY.png"
-          />
-          <p>Adidas Fear of God 86</p>
-          <p>R7 499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img
-            src="Assets/Adidas/ADIDAS FEAR OF GOD ATHLETICS BASKETBALL CARBON.png"
-          />
-          <p>Adidas Fear of God Carbon</p>
-          <p>R6,999</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img
-            src="Assets/Adidas/ADIDAS FORUM BUCKLE LOW BAD BUNNY LAST FORUM.png"
-          />
-          <p>Adidas Bad Bunny Forum</p>
-          <p>R5,500</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img
-            src="Assets/Adidas/ADIDAS NITE JOGGER BEYONCE IVY PARK DARK GREEN FROZEN YELLOW.png"
-          />
-          <p>Adidas Nite Jogger Ivy Park</p>
-          <p>R3,499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-      </section>
-      <p id="itemlist3">New Balance</p>
-      <section class="imagecontainer3">
-        <div>
-          <img
-            src="Assets/New Balance/NEW BALANCE 2002R PROTECTION PACK PHANTOM.png"
-          />
-          <p>New Balance 2002R</p>
-          <p>R5,499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img
-            src="Assets/New Balance/NEW BALANCE 550 SEA SALT MACADAMIA NUT.png"
-          />
-          <p>New Balance 550 Sea Salt</p>
-          <p>R3,799</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img src="Assets/New Balance/NEW BALANCE 9060 DECEMBER SKY.png" />
-          <p>New Balance 9060 Sky</p>
-          <p>R4,499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-        <div>
-          <img src="Assets/New Balance/NEW BALANCE 9060 GREY DAY.png" />
-          <p>New Balance 9060 Grey Day</p>
-          <p>R5,499</p>
-          <button class="cart">Add to Cart</button>
-        </div>
-      </section>
+    <main class="products">
+      <!--  rendered products from product.js file -->
+      <div class="category yeezy" id="itemlist1">
+        <h2>Yeezy</h2>
+        <section class="imagecontainer">
+          <!-- Yeezy products here -->
+        </section>
+      </div>
+
+      <div class="category adidas" id="itemlist2">
+        <h2>Adidas</h2>
+        <section class="imagecontainer">
+          <!-- Adidas products here -->
+        </section>
+      </div>
+
+      <div class="category new-balance" id="itemlist3">
+        <h2>New Balance</h2>
+        <section class="imagecontainer">
+          <!-- New Balance products here -->
+        </section>
+      </div>
     </main>
+    <div class="cartTab">
+      <h1>Shopping Cart</h1>
+      <div class="listCart"></div>
+      <div class="total">Total (0 Items): R0</div>
+      <div class="btn">
+        <button class="close">Close</button>
+        <div class="btn">
+          <a href="checkout.html" target="_blank" class="checkout">Checkout</a>
+        </div>
+      </div>
+    </div>
+    <script src="./products.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

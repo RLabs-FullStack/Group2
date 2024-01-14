@@ -1,19 +1,58 @@
-<<<<<<< HEAD
-body{
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #c0bdbd;
 }
 
-.heading{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #c0bdbd;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    transition: transform 0.5s;
+}
+
+#itemlist1, #itemlist2, #itemlist3 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    right: 5%;
+}
+
+svg {
+    width: 30px;
+    padding-top: 20px;
+}
+
+.heading .icon-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+.heading .icon-cart span {
+    display:flex;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 40%;
 }
 /* styling for images */
-/* if more space is needed on the right side for the cart, you can decrease the width and height properties for the image containers*/
-/* imagecontainers 1,2 and three are housing the three different shoe categories. Yeezy, addidas and new balance */
+
+
 .imagecontainer1{
     display: flex;
 }
@@ -83,9 +122,209 @@ body{
     opacity: 0.2;
 }
 button{
+    cursor: pointer;
     border-radius: 10px;
     background-color: rgb(183, 184, 178);
 }
-div{
+
+.cartTab {
+    width: 400px;
+    background-color: rgb(74, 121, 92);
+    color: white;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px  1fr 70px;
+    transition: 0.5s;
+}
+
+body .showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+body .showCart main {
+    transform: translateX(-400px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.cartTab h1 {
+    margin: 0;
+    padding: 20px;
+    font-weight: 300;
+}
+
+.cartTab .total {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button {
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+
+}
+
+.cartTab .btn .close  {
+    background-color: white;
+}
+ .cartTab .close:hover {
+    background-color: #45a049;
+  }
+
+.cartTab .listCart .items img{
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cartTab .listCart .items {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: white;
+}
+
+.listCart .items:nth-child(even){
+    background-color: gray;
+}
+
+.listCart {
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+/* css to assist with rendering the products */
+
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.product img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #888;
+}
+
+.cart {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cart:hover {
+    background-color: #45a049;
+}
+
+ .btn a.checkout {
+  display: inline-block;
+  padding: 15px 55px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn a.checkout:hover {
+  background-color: #45a049;
+}
+
+/* styling for checkout page */
+
+.proceedCO a{
+    display: inline-block;
+    padding: 15px 55px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
     
 }
+.proceedCO a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+.proceedCO a:hover {
+    background-color: #45a049;
+}
+
+
